@@ -1,61 +1,87 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#050505;
-color:white;
-font-family:Arial,sans-serif;
+    font-family:Arial,sans-serif;
+    color:white;
+
+    /* BACKGROUND IMAGE */
+    background: url("assets/background.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
-.hero,
-.showreel,
-.portfolio,
-.stats,
+/* dark overlay for readability */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.75);
+    z-index:-1;
+}
+
+.hero, 
+.showreel, 
+.portfolio, 
+.stats, 
 .contact{
-padding:80px 20px;
-text-align:center;
+    padding:80px 20px;
+    text-align:center;
 }
 
-h1,h2{
-color:gold;
-margin-bottom:20px;
-}
-
+/* RESPONSIVE TEXT FIX */
 h1{
-font-size:52px;
+    font-size:clamp(32px, 5vw, 52px);
+    color:gold;
+    margin-bottom:20px;
+}
+
+h2{
+    color:gold;
+    margin-bottom:20px;
+    font-size:clamp(22px, 4vw, 34px);
 }
 
 .btn{
-display:inline-block;
-padding:14px 30px;
-background:gold;
-color:black;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-margin-top:20px;
+    display:inline-block;
+    padding:14px 30px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    margin-top:20px;
 }
 
+/* VIDEO FIX (MAIN PROBLEM SOLVED) */
 video{
-width:100%;
-max-width:900px;
-border:2px solid gold;
-border-radius:20px;
-margin-top:20px;
+    width:100%;
+    max-width:900px;
+    height:auto;
+    border:2px solid gold;
+    border-radius:20px;
+    margin-top:20px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
 
+/* GRID FIX */
 .video-grid{
-display:grid;
-gap:30px;
-max-width:900px;
-margin:auto;
+    display:grid;
+    gap:30px;
+    max-width:900px;
+    margin:auto;
 }
 
+/* STATS */
 .stats div{
-margin:20px 0;
-font-size:22px;
-color:gold;
+    margin:20px 0;
+    font-size:clamp(18px, 2.5vw, 22px);
+    color:gold;
 }
