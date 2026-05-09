@@ -1,0 +1,190 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html, body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+/* ================= BACKGROUND ================= */
+body{
+    color:white;
+    min-height:100vh;
+
+    background: url("assets/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* dark overlay */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.78);
+    z-index:-1;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:rgba(0,0,0,0.6);
+    position:sticky;
+    top:0;
+    backdrop-filter: blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:gold;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:gold;
+}
+
+/* ================= HERO ================= */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+h1{
+    font-size:clamp(34px, 5vw, 55px);
+    color:gold;
+    margin-bottom:10px;
+}
+
+h2{
+    font-size:clamp(22px, 3vw, 32px);
+    color:gold;
+    margin-bottom:15px;
+}
+
+p{
+    font-size:16px;
+    opacity:0.9;
+}
+
+/* ================= BUTTON ================= */
+.btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* ================= VIDEO FIX ================= */
+video{
+    width:100%;
+    max-width:750px;
+    aspect-ratio:16/9;
+    object-fit:contain;
+    border:2px solid gold;
+    border-radius:15px;
+    margin:20px auto;
+    display:block;
+}
+
+/* ================= GRID ================= */
+.video-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+    justify-items:center;
+}
+
+/* ================= SECTIONS ================= */
+.showreel,
+.portfolio,
+.stats,
+.contact,
+.about-section,
+.services-section,
+.testimonials-section,
+.comment-section,
+.contact-form{
+    padding:60px 20px;
+    text-align:center;
+}
+
+/* ================= STATS ================= */
+.stats div{
+    margin:10px 0;
+    font-size:18px;
+    color:gold;
+}
+
+/* ================= SERVICE CARDS ================= */
+.service-card{
+    background:rgba(0,0,0,0.5);
+    border:1px solid gold;
+    padding:20px;
+    margin:15px auto;
+    max-width:600px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonial-card{
+    background:rgba(0,0,0,0.5);
+    border:1px solid gold;
+    padding:20px;
+    margin:15px auto;
+    max-width:600px;
+    border-radius:12px;
+}
+
+/* ================= FORMS ================= */
+input, textarea{
+    width:90%;
+    max-width:500px;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+    outline:none;
+}
+
+textarea{
+    resize:none;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.6);
+    margin-top:40px;
+    font-size:14px;
+}
